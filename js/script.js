@@ -29,7 +29,15 @@ const cleo = createPet("Cleo", "rat");
 const francine = createPet("Francine", "turtle");
 
 // console.log(sora, clover, baxter, cleo, francine);
-clover.sleep();
-baxter.play();
 
+// clover.sleep();
+// baxter.play();
 // console.log(clover, baxter);
+
+clover.isTired = 8;
+// console.log(clover);
+francine.isTired = 9;
+// console.log(francine);
+
+const allPets = [sora, clover, baxter, cleo, francine];
+console.log(allPets);
