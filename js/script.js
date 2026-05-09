@@ -47,10 +47,13 @@ const showPets = function (petArray) {
   for (let pet of petArray) {
     let status = "ready to play!";
     if (pet.isTired >= 7) {
-      status = "sleeping";
+      status = "sleeping.";
     }
-    let li = document.createElement("li");
-    li.innerHTML = `<span class="pet-name">${pet.name}</span> the ${pet.species} is ${status}.`;
+    const li = document.createElement("li");
+    li.innerHTML = `<span class="pet-name">${pet.name}</span> the ${pet.species} is ${status}`;
     pets.append(li);
   }
 };
+statusButton.addEventListener("click", function () {
+  showPets(allPets);
+});
